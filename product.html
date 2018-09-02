@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<!-- 1、指定基础语言 -->
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <!--2、指定视口信息-->
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
+    <!--3、指定跨IE浏览器兼容性-->
+    <meta http-equiv="x-ua-compatible" content="IE=edge"/>
+    <title>产品明细</title>
+    <!--4、引入 Bootstrap.css-->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/smartzoom.css">
+    <link rel="stylesheet" href="css/iconfont/iconfont.css">
+    <!--5、引入两个兼容性文件(老IE)-->
+    <!--[if lt IE 9]>
+    <!--<script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>-->
+</head>
+<body scroll="no" style="overflow-x: hidden">
+    <!--页面顶部-->
+    <header id="top">
+        <div id="logo">
+            开启你的智能生活
+        </div>
+    </header>
+    <!--导航栏-->
+    <nav id="nav">
+        <div id="header">
+           <ul class="rt">
+                <li id="search">
+                    <span class="iconfont icon-sousuo" id="searchBtn"></span>
+                    <ul>
+                        <form id="searchForm">
+                            <input type="text" name="search" placeholder="搜索您的商品名称"/><button class="iconfont icon-zuojiantou"></button>
+                        </form>
+                    </ul>
+                </li>
+                <li id="login">
+                    <span class="iconfont icon-yonghu" id="user"></span>
+                    <ul id="modal">
+                        <form id="loginForm" action="#" method="post">
+                            <div>
+                                <b>用户登录</b>
+                                <i class="iconfont icon-shanchu" id="logClose"></i>
+                            </div>
+                            <div>
+                                <p><input type="text" name="useName" placeholder="账号/手机/邮箱"/></p>
+                                <p><input type="password" name="psw" placeholder="密码"/></p>
+                                <p><input type="button" value="登录" id="bt-login"></p>
+                                <p>
+                                    <span id="regBtn">立即注册</span>
+                                    <a href="#" class="forget"><span>忘记密码？</span></a>
+                                </p>
+                                <div class="loginAnother">
+                                    <p>其他方式登录</p>
+                                    <a href="#" class="xinlang">
+                                        <i class="iconfont icon-xinlang-copy1"></i>
+                                    </a>
+                                    <a href="#" class="qq">
+                                        <i class="iconfont icon-QQ-copy"></i>
+                                    </a>
+                                    <a href="#" class="weixin1">
+                                        <i class="iconfont icon-weixin1-copy"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </form>
+                    </ul>
+                    <ul id="register">
+                        <form id="registerForm" action="#" method="post">
+                            <div>
+                                <b>用户注册</b>
+                                <i class="iconfont icon-shanchu" id="regClose"></i>
+                            </div>
+                            <div>
+                                <p><input type="text" name="useName" placeholder="您的手机号码/邮箱"/></p>
+                                <p>
+                                    <input type="text" name="checkNumber" placeholder="请输入验证码"/><a href="#" class="checkNum">
+                                    获取验证码</a>
+                                </p>
+                                <p><input type="password" name="psw" placeholder="请设置登录密码"/></p>
+                                <p><input type="password" name="psw" placeholder="确认登录密码"/></p>
+                                <p><input type="button" value="注册" id="bt-reg"></p>
+                                <p>
+                                    注册即表示您同意遵守
+                                    <a href="#"><b>用户协议</b></a>和
+                                    <a href="#"><b>隐私政策</b></a><br/>
+                                    <span id="logBtn">立即登录</span>
+                                </p>
+                            </div>
+                        </form>
+                    </ul>
+                </li>
+                <li>
+                    <span  class="iconfont icon-gouwuche"></span>
+                </li>
+            </ul>
+            <ul class="lf">
+                <li><a href="futurestore.html">未来商店</a></li>
+                <li><a href="#">智能手环</a></li>
+                <li><a href="#">智能家居</a></li>
+                <li><a href="#">健康设备</a></li>
+                <li><a href="dataserve.html">数据服务</a></li>
+            </ul>
+        </div>
+    </nav>
+        <div class="clear"></div>
+        <!--banner广告栏-->
+        <!--页面主体-->
+    <section class="container-fluid" id="storeList">
+        <div class="storeList">
+            <div>
+                <img src="img/apple/a0.jpg"/>
+            </div>
+            <div class="storeDetail">
+                <div><b>苹果 Apple</b>  &nbsp;&nbsp;<span>Think different</span></div>
+                <p><a href="#">品牌官网</a></p>
+                <p>苹果公司是美国的一家高科技公司。由史蒂夫•乔布斯、斯蒂夫•沃兹尼亚克和罗•韦恩等三人于1976年4月1日创立，
+                    并命名为美国苹果电脑公司，2007年1月9日更名为苹果公司，
+                    总部位于加利福尼亚州的库比蒂诺。苹果公司1980年12月12日公开招
+                </p>
+            </div>
+        </div>
+        <div id="product" >
+            <div class="product">
+                <h4>产品</h4>
+            </div>
+            <ul>
+                <li>
+                    <a href="#">
+                        <img src="img/apple/a1.jpg" class="img-responsive">
+                    <p>
+                        耐克Nike + 苹果iPod传感器
+                    </p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/apple/a2.jpg" class="img-responsive">
+                    <p>
+                        Apple Pencil
+                    </p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/apple/a3.jpg" class="img-responsive">
+                    <p>
+                        苹果Apple Watch Series 智能手表
+                    </p>
+                    </a>
+                </li>
+                <li >
+                    <a href="#">
+                        <img src="img/apple/a4.jpg" class="img-responsive">
+                    <p>
+                        苹果AirPods无线耳机
+                    </p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/apple/a5.jpg" class="img-responsive">
+                        <p>
+                            Apple Watch Series 2智能手表
+                        </p>
+                    </a>
+                </li>
+                <li >
+                    <a href="#">
+                        <img src="img/apple/a6.jpg" class="img-responsive">
+                        <p>
+                            苹果Apple VR智能眼镜
+                        </p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!--页面底部-->
+    <footer id="footer">
+        <p>
+           <span>
+               <a href="#">联系我们</a>
+           </span>
+           <span>
+               <a href="#">关于我们</a>
+           </span>
+           <span>
+               <a href="#">相关报道</a>
+           </span>
+           <span>
+               <a href="">平台服务</a>
+           </span>
+           <span>
+               <a href="">加入我们</a>
+           </span>
+       </p>
+        <p>
+           <span>
+               合作伙伴
+           </span>
+           <span>
+               <a href="http://www.bthhotels.com/" target="_blank">
+                   <img src="images03/01.png">
+               </a>
+           </span>
+           <span>
+               <a href="http://www.iflytek.com/" target="_blank">
+                   <img src="images03/02.png" >
+               </a>
+           </span>
+           <span>
+               <a href="http://www.lkkbrand.com/" target="_blank">
+                   <img src="images03/03.png">
+               </a>
+           </span>
+           <span>
+               <a href="http://www.myzaker.com/" target="_blank">
+                   <img src="images03/04.png">
+               </a>
+           </span>
+        </p>
+        <p>
+            &copy;2014-2017 北京奇天大胜网络科技有限公司 (京ICP备14037353号-1)
+        </p>
+    </footer>
+
+
+<!--6、引入 行为依赖 文件-->
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/fs.js"></script>
+<!-- <script src="js/bootstrap.js"></script>
+&lt;!&ndash;7、引入测试的JS文件&ndash;&gt;
+<script src="js/bootlint.js"></script>
+<script>
+</script> -->
+</body>
+</html>

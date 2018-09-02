@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<!-- 1、指定基础语言 -->
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <!--2、指定视口信息-->
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
+    <!--3、指定跨IE浏览器兼容性-->
+    <meta http-equiv="x-ua-compatible" content="IE=edge"/>
+    <title>未来商店</title>
+    <!--4、引入 Bootstrap.css-->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/smartzoom.css">
+    <link rel="stylesheet" href="css/iconfont/iconfont.css">
+    <!--5、引入两个兼容性文件(老IE)-->
+    <!--[if lt IE 9]-->
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+</head>
+<body>
+    <!--页面顶部-->
+    <header id="top">
+        <div id="logo">
+            开启你的智能生活
+        </div>
+    </header>
+    <!--导航栏-->
+    <nav id="nav">
+        <div id="header">
+            <ul class="rt">
+                <li id="search">
+                    <span class="iconfont icon-sousuo" id="searchBtn"></span>
+                    <ul>
+                        <form id="searchForm">
+                            <input type="text" name="search" placeholder="搜索您的商品名称"/><button class="iconfont icon-zuojiantou"></button>
+                        </form>
+                    </ul>
+                </li>
+                <li id="login">
+                    <span class="iconfont icon-yonghu" id="user"></span>
+                    <ul id="modal">
+                        <form id="loginForm" action="#" method="post">
+                            <div>
+                                <b>用户登录</b>
+                                <i class="iconfont icon-shanchu" id="logClose"></i>
+                            </div>
+                            <div>
+                                <p><input type="text" name="useName" placeholder="账号/手机/邮箱"/></p>
+                                <p><input type="password" name="psw" placeholder="密码"/></p>
+                                <p><input type="button" value="登录" id="bt-login"></p>
+                                <p>
+                                    <span id="regBtn">立即注册</span>
+                                    <a href="#" class="forget"><span>忘记密码？</span></a>
+                                </p>
+                                <div class="loginAnother">
+                                    <p>
+                                        其他方式登录
+                                    </p>
+                                    <a href="#" class="xinlang">
+                                        <i class="iconfont icon-xinlang-copy1"></i>
+                                    </a>
+                                    <a href="#" class="qq">
+                                        <i class="iconfont icon-QQ-copy"></i>
+                                    </a>
+                                    <a href="#" class="weixin1">
+                                        <i class="iconfont icon-weixin1-copy"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </form>
+                    </ul>
+                    <ul id="register">
+                        <form id="registerForm" action="#" method="post">
+                            <div>
+                                <b>用户注册</b>
+                                <i class="iconfont icon-shanchu" id="regClose"></i>
+                            </div>
+                            <div>
+                                <p><input type="text" name="useName" placeholder="您的手机号码/邮箱"/></p>
+                                <p>
+                                    <input type="text" name="checkNumber" placeholder="请输入验证码"/><a href="#" class="checkNum">
+                                    获取验证码</a>
+                                </p>
+                                <p><input type="password" name="psw" placeholder="请设置登录密码"/></p>
+                                <p><input type="password" name="psw" placeholder="确认登录密码"/></p>
+                                <p><input type="button" value="注册" id="bt-reg"></p>
+                                <p>
+                                    注册即表示您同意遵守
+                                    <a href="#"><b>用户协议</b></a>和
+                                    <a href="#"><b>隐私政策</b></a><br/>
+                                    <span id="logBtn">立即登录</span>
+                                </p>
+                            </div>
+                        </form>
+                    </ul>
+                </li>
+                <li>
+                    <span  class="iconfont icon-gouwuche"></span>
+                </li>
+            </ul>
+            <ul class="lf">
+                <li><a href="futurestore.html">未来商店</a></li>
+                <li><a href="#">智能手环</a></li>
+                <li><a href="#">智能家居</a></li>
+                <li><a href="#">健康设备</a></li>
+                <li><a href="dataserve.html">数据服务</a></li>
+            </ul>
+        </div>
+        <div class="clear"></div>
+        <!--banner广告栏-->
+        <div id="bannerStore"  >
+           <div class="bannerbox">
+                <div class="Homebanner">
+                    <ul>
+                        <li class="Load cur" style="z-index:99">
+                            <img src="img/index/banner01.jpg" alt="">
+                           <!-- <div class="Homebannertext">
+                                <img src="img/index/banner01.png" class="bannereffect bannertime bigimg">
+                            </div>-->
+                        </li>
+                        <li class="Load">
+                            <img src="img/index/banner02.jpg" alt="">
+                           <!-- <div class="Homebannertext">
+                                <img src="img/index/banner02.png" class="bannereffect bannertime bigimg">
+                            </div>-->
+                        </li>
+                        <li class="Load"><img src="img/index/banner03.jpg" alt="">
+                            <!--<div class="Homebannertext">
+                                <dl class="bannerthree clearfix">
+                                    <dt class="bannereffect bannertime"><img src="img/index/banner03.png" alt=""></dt>
+                                </dl>
+                            </div>-->
+                        </li>
+                    </ul>
+                    <div class="Homeleft"><</div>
+                    <div class="Homeright">></div>
+                    <div class="Homedot">
+                        <a href="javascript:;" class="cur">1</a>
+                        <a href="javascript:;">2</a>
+                        <a href="javascript:;">3</a>
+                    </div>
+                </div>
+            </div>
+          <!-- <ul class="bannerLf">
+               <li>
+                   智能手环 智能手表<span class="iconfont icon-jiantou-"></span>
+                   <ul class="cata-box1">
+                       <li>
+                           <a href="#">华为手环B3</a>
+                           <a href="#" class="xuangou">选购</a>
+                       </li>
+                       <li>
+                           <a href="#">乐心智能手环Ziva</a>
+                           <a href="#" class="xuangou">选购</a>
+                       </li>
+                       <li>
+                           <a href="#">乐心手环Mambo</a>
+                           <a href="#" class="xuangou">选购</a>
+                       </li>
+                       <li>
+                           <a href="#">AMAZFIT健康手环</a>
+                           <a href="#" class="xuangou">选购</a>
+                       </li>
+                       <li>
+                           <a href="#">小米手环2</a>
+                           <a href="#" class="xuangou">选购</a>
+                       </li>
+                       <li>
+                           <a href="#">宜准运动手表S2</a>
+                           <a href="#" class="xuangou">选购</a>
+                       </li>
+                       <li>
+                           <a href="#">宜准运动手表T028B01</a>
+                           <a href="#" class="xuangou">选购</a>
+                       </li>
+                       <li>
+                           <a href="#">搜狗糖猫儿童电话智能手表M1</a>
+                           <a href="#" class="xuangou">选购</a>
+                       </li>
+                   </ul>
+               </li>
+               <li>
+                   智能家居 智能电器<span class="iconfont icon-jiantou-"></span>
+                   <ul class="cata-box2">
+                       <li>
+                           <a href="#">欧瑞迈 ORIMAG P6小投影仪</a>
+                           <a href="#" class="xuangou">选购</a>
+                       </li>
+                       <li>
+                           <a href="#">欧瑞博S20C</a>
+                           <a href="#" class="xuangou">选购</a>
+                       </li>
+                       <li>
+                           <a href="#">欧瑞博 小欧智能摄像机</a>
+                           <a href="#" class="xuangou">选购</a>
+                       </li>
+                       <li>
+                           <a href="#">伊丽莎白智能语音灯</a>
+                           <a href="#" class="xuangou">选购</a>
+                       </li>
+                       <li>
+                           <a href="#">ILIFE扫地机器人V5旗舰版</a>
+                           <a href="#" class="xuangou">选购</a>
+                       </li>
+                       <li>
+                           <a href="#">摩飞MR5003咖啡机</a>
+                           <a href="#" class="xuangou">选购</a>
+                       </li>
+                       <li>
+                           <a href="#">霍尼韦尔空气净化器</a>
+                           <a href="#" class="xuangou">选购</a>
+                       </li>
+                   </ul>
+               </li>
+               <li>
+                   智能出行 智能耳机<span class="iconfont icon-jiantou-"></span>
+                   <ul class="cata-box3">
+                       <li>
+                           <a href="#">Knirps德国全自动开收三折折叠</a>
+                           <a href="#" class="xuangou">选购</a>
+                       </li>
+                       <li>
+                           <a href="#"> IWALK智能双轮体感车</a>
+                           <a href="#" class="xuangou">选购</a>
+                       </li>
+                       <li>
+                           <a href="#">卡儿酷电蝎子五代</a>
+                           <a href="#" class="xuangou">选购</a>
+                       </li>
+                       <li>
+                           <a href="#">5D超引力磁悬浮蓝牙音箱</a>
+                           <a href="#" class="xuangou">选购</a>
+                       </li>
+                       <li>
+                           <a href="#">捷波朗蓝牙耳机弦月3</a>
+                           <a href="#" class="xuangou">选购</a>
+                       </li>
+                       <li>
+                           <a href="#">Linner主动降噪耳机 NC21 Pro</a>
+                           <a href="#" class="xuangou">选购</a>
+                       </li>
+                   </ul>
+               </li>
+               <li>
+                   健康设备 娱乐设备<span class="iconfont icon-jiantou-"></span>
+                   <ul class="cata-box4">
+                       <li>
+                           <a href="#">乐心体脂秤S5</a>
+                           <a href="#" class="xuangou">选购</a>
+                       </li>
+                       <li>
+                           <a href="#">牙小白S1儿童智能牙刷</a>
+                           <a href="#" class="xuangou">选购</a>
+                       </li>
+                       <li>
+                           <a href="#">乐心智能体脂秤</a>
+                           <a href="#" class="xuangou">选购</a>
+                       </li>
+                       <li>
+                           <a href="#">乐心i5S血压计</a>
+                           <a href="#" class="xuangou">选购</a>
+                       </li>
+                       <li>
+                           <a href="#">NewGame新游无线游戏手柄</a>
+                           <a href="#" class="xuangou">选购</a>
+                       </li>
+                       <li>
+                           <a href="#">极米无屏电视H1</a>
+                           <a href="#" class="xuangou">选购</a>
+                       </li>
+                       <li>
+                           <a href="#">微跑小蛙体感游戏机</a>
+                           <a href="#" class="xuangou">选购</a>
+                       </li>
+                   </ul>
+               </li>
+               <li>
+                   无人机 &nbsp;&nbsp;&nbsp;机器人&nbsp;&nbsp; <span class="iconfont icon-jiantou-"></span>
+                   <ul class="cata-box5">
+                       <li>
+                           <a href="#">零度智控DOBBY智趣飞行相机</a>
+                           <a href="#" class="xuangou">选购</a>
+                       </li>
+                       <li>
+                           <a href="#">大疆Phantom 3 Standard无人机</a>
+                           <a href="#" class="xuangou">选购</a>
+                       </li>
+                       <li>
+                           <a href="#">玻妞HOBOT-198擦窗机器人</a>
+                           <a href="#" class="xuangou">选购</a>
+                       </li>
+                       <li>
+                           <a href="#">bogo儿童探索机器人T808</a>
+                           <a href="#" class="xuangou">选购</a>
+                       </li>
+                       <li>
+                           <a href="#">小胖智能机器人</a>
+                           <a href="#" class="xuangou">选购</a>
+                       </li>
+                   </ul>
+               </li>
+           </ul>-->
+        </div>
+    </nav>
+    <section id="main" class="container">
+        <ul id="store1">
+            <li class="store">
+                <div class="brandBox">
+                    <a href="#">
+                        <img src="img/index/apple01.jpg" class="img-responsive">
+                    <div class="brandShadow">
+                            <img src="img/index/apple02.jpg" class="img-responsive img-circle">
+                        <p>苹果Apple<br/>
+                            6个产品</p>
+                    </div>
+                    </a>
+                </div>
+            </li>
+            <li class="store">
+                <div class="brandBox">
+                    <a href="#">
+                        <img src="img/index/sam01.jpg" class="img-responsive">
+                    <div class="brandShadow">
+                            <img src="img/index/sam02.jpg" class="img-responsive img-circle">
+                        <p>三星<br/>
+                            10个产品</p>
+                    </div>
+                    </a>
+                </div>
+            </li>
+            <li class="store">
+                <div class="brandBox">
+                    <a href="#">
+                        <img src="img/index/sony01.jpg" class="img-responsive">
+                    <div class="brandShadow">
+                            <img src="img/index/sony02.jpg" class="img-responsive img-circle">
+                        <p>索尼<br/>
+                            13个产品</p>
+                    </div>
+                    </a>
+                </div>
+            </li>
+            <li class="store">
+                <div class="brandBox">
+                    <a href="#">
+                        <img src="img/index/htc01.jpg" class="img-responsive">
+                    <div class="brandShadow">
+                            <img src="img/index/htc02.jpg" class="img-responsive img-circle">
+                        <p>HTC<br/>
+                            5个产品</p>
+                    </div>
+                    </a>
+                </div>
+            </li>
+            <li class="store">
+                <div class="brandBox">
+                    <a href="#">
+                        <img src="img/index/mic01.jpg" class="img-responsive">
+                    <div class="brandShadow">
+                            <img src="img/index/mic02.jpg" class="img-responsive img-circle">
+                        <p>微软<br/>
+                            4个产品</p>
+                    </div>
+                    </a>
+                </div>
+            </li>
+            <li class="store">
+                <div class="brandBox">
+                    <a href="#">
+                        <img src="img/index/len01.jpg" class="img-responsive">
+                    <div class="brandShadow">
+                            <img src="img/index/len02.jpg" class="img-responsive img-circle">
+                        <p>联想<br/>
+                            12个产品</p>
+                    </div>
+                    </a>
+                </div>
+            </li>
+            <li class="store">
+                <div class="brandBox">
+                    <a href="#">
+                        <img src="img/index/dij01.jpg" class="img-responsive">
+                    <div class="brandShadow">
+                            <img src="img/index/dij02.jpg" class="img-responsive img-circle">
+                        <p>大疆<br/>
+                            18个产品</p>
+                    </div>
+                    </a>
+                </div>
+            </li>
+            <li class="store">
+                <div class="brandBox">
+                    <a href="#">
+                        <img src="img/index/huawei01.jpg" class="img-responsive">
+                    <div class="brandShadow">
+                            <img src="img/index/huawei02.jpg" class="img-responsive img-circle">
+                        <p>华为<br/>
+                            13个产品</p>
+                    </div>
+                    </a>
+                </div>
+            </li>
+            <li class="store">
+                <div class="brandBox">
+                    <a href="#">
+                        <img src="img/index/broad01.jpg" class="img-responsive">
+                        <div class="brandShadow">
+                            <img src="img/index/broad02.jpg" class="img-responsive img-circle">
+                            <p>BroadLink<br/>
+                                8个产品</p>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li class="store">
+                <div class="brandBox">
+                    <a href="#">
+                        <img src="img/index/weiji01.jpg" class="img-responsive">
+                        <div class="brandShadow">
+                            <img src="img/index/weiji02.jpg" class="img-responsive img-circle">
+                            <p>微鲸<br/>
+                                8个产品</p>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li class="store">
+                <div class="brandBox">
+                    <a href="#">
+                        <img src="img/index/gimi01.jpg" class="img-responsive">
+                        <div class="brandShadow">
+                            <img src="img/index/gimi02.jpg" class="img-responsive img-circle">
+                            <p>极米<br/>
+                                8个产品</p>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            <li class="store">
+                <div class="brandBox">
+                    <a href="#">
+                        <img src="img/index/lexin01.jpg" class="img-responsive">
+                        <div class="brandShadow">
+                            <img src="img/index/lexin02.jpg" class="img-responsive img-circle">
+                            <p>乐心<br/>
+                                16个产品</p>
+                        </div>
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </section>
+    <!--页面底部-->
+    <footer id="footer">
+       <p>
+           <span>
+               <a href="#">联系我们</a>
+           </span>
+           <span>
+               <a href="#">关于我们</a>
+           </span>
+           <span>
+               <a href="#">相关报道</a>
+           </span>
+           <span>
+               <a href="">平台服务</a>
+           </span>
+           <span>
+               <a href="">加入我们</a>
+           </span>
+       </p>
+        <p>
+           <span>
+               合作伙伴
+           </span>
+           <span>
+               <a href="http://www.bthhotels.com/" target="_blank">
+                   <img src="img/index/01.png">
+               </a>
+           </span>
+           <span>
+               <a href="http://www.iflytek.com/" target="_blank">
+                   <img src="img/index/02.png" >
+               </a>
+           </span>
+           <span>
+               <a href="http://www.lkkbrand.com/" target="_blank">
+                   <img src="img/index/03.png">
+               </a>
+           </span>
+           <span>
+               <a href="http://www.myzaker.com/" target="_blank">
+                   <img src="img/index/04.png">
+               </a>
+           </span>
+        </p>
+        <p>
+            &copy;2014-2017 北京奇天大胜网络科技有限公司 (京ICP备14037353号-1)
+        </p>
+    </footer>
+
+<!--6、引入 行为依赖 文件-->
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/fs.js"></script>
+<script src="js/banner.js"></script>
+</body>
+</html>

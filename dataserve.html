@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<!-- 1、指定基础语言 -->
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <!--2、指定视口信息-->
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
+    <!--3、指定跨IE浏览器兼容性-->
+    <meta http-equiv="x-ua-compatible" content="IE=edge"/>
+    <title>数据服务</title>
+    <!--4、引入 Bootstrap.css-->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/smartzoom.css">
+    <link rel="stylesheet" href="css/iconfont/iconfont.css">
+    <!--5、引入两个兼容性文件(老IE)-->
+    <!--[if lt IE 9]>
+    <!--<script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>-->
+</head>
+<body scroll="no" style="overflow-x: hidden">
+    <!--页面顶部-->
+    <header id="top">
+        <div id="logo">
+            开启你的智能生活
+        </div>
+        <ul id="TopBox">
+            <li class="kefu">
+                <a href="#" >
+                    <div class="side-text">
+                        <i class="iconfont icon-qq"></i>
+                        &nbsp;&nbsp;<span>QQ客服</span>
+                    </div>
+                </a>
+            </li>
+            <li class="guanzhu">
+                <i class="iconfont icon-weixin1-copy"></i>
+            </li>
+            <li id="toTop">
+                <i class="iconfont icon-xiangshang1"></i>
+            </li>
+        </ul>
+    </header>
+    <!--导航栏-->
+    <nav id="nav">
+        <div id="header">
+           <ul class="rt">
+                <li id="search">
+                    <span class="iconfont icon-sousuo" id="searchBtn"></span>
+                    <ul>
+                        <form id="searchForm">
+                            <input type="text" name="search" placeholder="搜索您的商品名称"/><button class="iconfont icon-zuojiantou"></button>
+                        </form>
+                    </ul>
+                </li>
+                <li id="login">
+                    <span class="iconfont icon-yonghu" id="user"></span>
+                    <ul id="modal">
+                        <form id="loginForm" action="#" method="post">
+                            <div>
+                                <b>用户登录</b>
+                                <i class="iconfont icon-shanchu" id="logClose"></i>
+                            </div>
+                            <div>
+                                <p><input type="text" name="useName" placeholder="账号/手机/邮箱"/></p>
+                                <p><input type="password" name="psw" placeholder="密码"/></p>
+                                <p><input type="button" value="登录" id="bt-login"></p>
+                                <p>
+                                    <span id="regBtn">立即注册</span>
+                                    <a href="#" class="forget"><span>忘记密码？</span></a>
+                                </p>
+                                <div class="loginAnother">
+                                    <p>其他方式登录</p>
+                                    <a href="#" class="xinlang">
+                                        <i class="iconfont icon-xinlang-copy1"></i>
+                                    </a>
+                                    <a href="#" class="qq">
+                                        <i class="iconfont icon-QQ-copy"></i>
+                                    </a>
+                                    <a href="#" class="weixin1">
+                                        <i class="iconfont icon-weixin1-copy"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </form>
+                    </ul>
+                    <ul id="register">
+                        <form id="registerForm" action="#" method="post">
+                            <div>
+                                <b>用户注册</b>
+                                <i class="iconfont icon-shanchu" id="regClose"></i>
+                            </div>
+                            <div>
+                                <p><input type="text" name="useName" placeholder="您的手机号码/邮箱"/></p>
+                                <p>
+                                    <input type="text" name="checkNumber" placeholder="请输入验证码"/><a href="#" class="checkNum">
+                                    获取验证码</a>
+                                </p>
+                                <p><input type="password" name="psw" placeholder="请设置登录密码"/></p>
+                                <p><input type="password" name="psw" placeholder="确认登录密码"/></p>
+                                <p><input type="button" value="注册" id="bt-reg"></p>
+                                <p>
+                                    注册即表示您同意遵守
+                                    <a href="#"><b>用户协议</b></a>和
+                                    <a href="#"><b>隐私政策</b></a><br/>
+                                    <span id="logBtn">立即登录</span>
+                                </p>
+                            </div>
+                        </form>
+                    </ul>
+                </li>
+                <li>
+                    <span  class="iconfont icon-gouwuche"></span>
+                </li>
+            </ul>
+            <ul class="lf">
+                <li><a href="futurestore.html">未来商店</a></li>
+                <li><a href="#">智能手环</a></li>
+                <li><a href="#">智能家居</a></li>
+                <li><a href="#">健康设备</a></li>
+                <li><a href="dataserve.html">数据服务</a></li>
+            </ul>
+        </div>
+        <div class="clear"></div>
+        <!--banner广告栏-->
+        <div id="banner" class="container-fluid">
+            <div class="row">
+                <div>
+                    <img src="img/sevice/searchbg.jpg" class="img-responsive">
+                    <div class="row" id="banner_data">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-6 text-center">
+                            <div class="row" id="data_title">
+                                <div class="col-md-12" ><h4>基于智能硬件的个人数据平台</h4></div>
+                                <div class="col-md-6" >
+                                    <h5>
+                                    可绑定设备
+                                    </h5>
+                                </div>
+                                <div class="col-md-6">
+                                    <h5>
+                                    可上传数据
+                                    </h5>
+                                </div>
+                                <div class="col-md-6">
+                                    <span>3824</span>款智能硬件
+                                </div>
+                                <div class="col-md-6">
+                                    <span>444406</span>条数据
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <div class="row" id="data_login">
+                                <div class="col-md-12">
+                                    <img src="img/sevice/avatar.png" class=" img-circle" style="width: 18%">
+                                    <p>Hi,你好</p>
+                                </div>
+                                <div class="col-md-12">
+                                    <p>登录后,可查看<br>
+                                    个人数据信息</p>
+                                </div>
+                                <div class="col-md-12">
+                                    <form class="form-group" action="#" method="post">
+                                        <button>登录</button>&nbsp;
+                                        <button>注册</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-1"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!--页面主体-->
+    <section id="main" class="container">
+        <!--4小块-->
+        <div class="container" id="main_list">
+            <div id="data_visual">
+                <a href="#">
+                    <i class="iconfont icon-icon-data-with"></i>
+                    <h5>数据可视化</h5>
+                    <p>多维度的个人数据化展示</p>
+                </a>
+            </div>
+            <div id="equ_access">
+                <a href="#">
+                    <i class="iconfont icon-shebei"></i>
+                    <h5>设备开发接入</h5>
+                    <p>围绕健康的设备均可关联</p>
+                </a>
+            </div>
+            <div id="welfare_fund">
+                <a href="#">
+                    <i class="iconfont icon-jinbi"></i>
+                    <h5>健康福利基金</h5>
+                    <p>提交健康数据均可获得奖励</p>
+                </a>
+            </div>
+            <div id="data_serve">
+                <a href="#">
+                    <i class="iconfont icon-fuwu"></i>
+                    <h5>数据服务</h5>
+                    <p>基于个人数据精准服务推送</p>
+                </a>
+            </div>
+        </div>
+        <div id="main_module">
+            <ul class="container" id="cells">
+                <li class="cell01">
+                    <a href="#" >
+                    <i class="iconfont icon-yundong"></i>
+                    <p> 跑步模块</p>
+                    </a>
+                </li>
+                <li class="cell02">
+                    <a href="#" >
+                    <i class="iconfont icon-qixing"></i>
+                    <p>骑行模块</p>
+                    </a>
+                </li>
+                <li class="cell03">
+                    <a href="#" >
+                    <i class="iconfont icon-youyong4"></i>
+                    <p>游泳模块</p>
+                    </a>
+                </li>
+                <li class="cell04">
+                    <a href="#" >
+                    <i class="iconfont icon-qialuli"></i>
+                    <p>卡路里</p>
+                    </a>
+                </li>
+               <!--<li class="cell05">
+                    <a href="#" >
+                        <i class="iconfont icon-nantizhong"></i>
+                        <p>体重</p>
+                    </a>
+                </li>
+                <li class="cell06">
+                    <a href="#" >
+                        <i class="iconfont icon-xieya"></i>
+                        <p>血压</p>
+                    </a>
+                </li>
+                <li class="cell07">
+                    <a href="#" >
+                        <i class="iconfont icon-bushu"></i>
+                        <p>步数</p>
+                    </a>
+                </li>-->
+            </ul>
+        </div>
+        <!--可绑定设备-->
+        <div id="EquBinding" >
+               <ul>
+                   <li style="float: right"><a href="#">查看更多&gt;&gt;</a></li>
+                    <li><h4>可绑定设备</h4></li>
+               </ul>
+               <ul >
+                    <li>
+                        <a href="#">
+                            <img src="img/sevice/01.jpg" class="img-responsive">
+                        </a>
+
+                        <p>
+                            <a href="#">蜗牛睡眠高分子音乐助睡枕</a>
+                        </p>
+                        <ul>
+                            <li class="bangding">
+                                <button>立即绑定</button>
+                            </li>
+                            <li class="shopping">
+                                <button>直接购买</button>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/sevice/02.jpg" class="img-responsive">
+                        </a>
+
+                        <p>
+                            <a href="#">RyFit云悦体质分析仪</a>
+                        </p>
+                        <ul>
+                            <li>
+                                <button class="bangding">立即绑定</button>
+                            </li>
+                            <li class="shopping">
+                                <button >直接购买</button>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/sevice/03.jpg" class="img-responsive">
+                        </a>
+
+                        <p >
+                            <a href="#">蜗牛睡眠高分子音乐助睡枕</a>
+                        </p>
+                        <ul>
+                            <li >
+                                <button class="bangding">立即绑定</button>
+                            </li>
+                            <li class="shopping">
+                                <button>直接购买</button>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/sevice/04.jpg" class="img-responsive">
+                        </a>
+
+                        <p>
+                            <a href="#">RyFit云悦体质分析仪</a>
+                        </p>
+                        <ul>
+                            <li>
+                                <button class="bangding">立即绑定</button>
+                            </li>
+                            <li class="shopping">
+                                <button >直接购买</button>
+                            </li>
+                        </ul>
+                    </li>
+               </ul>
+        </div>
+        <!--活动-->
+        <div id="huodong" >
+            <ul>
+                <li style="float: right"><a href="#" >查看更多&gt;&gt;</a></li>
+                <li><h4>活动</h4></li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="#">
+                        <img src="img/sevice/activ01.jpg" class="img-responsive">
+                    </a>
+                    <p>
+                        <a href="#">和朋友一起提交数据</a>
+                    </p>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/sevice/activ02.jpg" class="img-responsive">
+                    </a>
+                    <p>
+                        <a href="#">健身，换个方式看世界</a>
+                    </p>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/sevice/activ03.jpg" class="img-responsive">
+                    </a>
+                    <p>
+                        <a href="#">和朋友一起提交数据</a>
+                    </p>
+                </li>
+                <li >
+                    <a href="#">
+                        <img src="img/sevice/activ04.jpg" class="img-responsive">
+                    </a>
+                    <p>
+                        <a href="#">七夕"情侣"竞技赛</a>
+                    </p>
+                </li>
+            </ul>
+        </div>
+        <!--服务-->
+        <div id="Service" >
+            <ul>
+                <li style="float: right"><a href="#" >查看更多&gt;&gt;</a></li>
+                <li><h4>服务</h4></li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="#">
+                        <img src="img/sevice/serve01.jpg" class="img-responsive">
+                    </a>
+                    <p>
+                        <a href="#">全民出行保险</a>
+                    </p>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/sevice/serve02.jpg" class="img-responsive">
+                    </a>
+                    <p>
+                        <a href="#">单人健康体检服务</a>
+                    </p>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="img/sevice/serve03.jpg" class="img-responsive">
+                    </a>
+                    <p>
+                        <a href="#">威尔士健身会所体验卡</a>
+                    </p>
+                </li>
+                <li >
+                    <a href="#">
+                        <img src="img/sevice/serve04.jpg" class="img-responsive">
+                    </a>
+                    <p>
+                        <a href="#">单人健身体验课程</a>
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!--页面底部-->
+    <footer id="footer">
+        <p>
+           <span>
+               <a href="#">联系我们</a>
+           </span>
+           <span>
+               <a href="#">关于我们</a>
+           </span>
+           <span>
+               <a href="#">相关报道</a>
+           </span>
+           <span>
+               <a href="">平台服务</a>
+           </span>
+           <span>
+               <a href="">加入我们</a>
+           </span>
+       </p>
+        <p>
+           <span>
+               合作伙伴
+           </span>
+          <span>
+               <a href="http://www.bthhotels.com/" target="_blank">
+                   <img src="img/index/01.png">
+               </a>
+           </span>
+           <span>
+               <a href="http://www.iflytek.com/" target="_blank">
+                   <img src="img/index/02.png" >
+               </a>
+           </span>
+           <span>
+               <a href="http://www.lkkbrand.com/" target="_blank">
+                   <img src="img/index/03.png">
+               </a>
+           </span>
+           <span>
+               <a href="http://www.myzaker.com/" target="_blank">
+                   <img src="img/index/04.png">
+               </a>
+           </span>
+        </p>
+        <p>
+            &copy;2014-2017 北京奇天大胜网络科技有限公司 (京ICP备14037353号-1)
+        </p>
+    </footer>
+
+
+<!--6、引入 行为依赖 文件-->
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/fs.js"></script>
+</body>
+</html>
